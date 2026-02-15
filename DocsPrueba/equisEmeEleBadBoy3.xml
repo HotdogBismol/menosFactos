@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Serie="EFOS" Folio="003" Fecha="2025-02-14T12:00:00" Sello="SelloFalso789" FormaPago="03" NoCertificado="00001000000123456789" Certificado="CertFalso789" SubTotal="20000.00" Moneda="MXN" Total="23200.00" TipoDeComprobante="I" Exportacion="01" MetodoPago="PUE" LugarExpedicion="60695" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cfdi:Emisor Rfc="AAA100303L51" Nombre="INGENIOS SANTOS, S.A. DE C.V." RegimenFiscal="601" />
+  <cfdi:Receptor Rfc="GCA180608UD1" Nombre="GRUPO CONSTRUCTOR ASFALMAQUINAS" DomicilioFiscalReceptor="39010" RegimenFiscalReceptor="601" UsoCFDI="G03" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="84111506" Cantidad="1" ClaveUnidad="ACT" Unidad="SERVICIO" Descripcion="Venta de maquinaria inexistente" ValorUnitario="20000.00" Importe="20000.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="20000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3200.00" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="3200.00">
+    <cfdi:Traslados>
+      <cfdi:Traslado Base="20000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3200.00" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="33333333-3333-3333-3333-333333333333" FechaTimbrado="2025-02-14T12:05:00" RfcProvCertif="LSO1306189R5" SelloCFD="SelloFalso789" NoCertificadoSAT="00001000000987654321" SelloSAT="SelloSatFalso789" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

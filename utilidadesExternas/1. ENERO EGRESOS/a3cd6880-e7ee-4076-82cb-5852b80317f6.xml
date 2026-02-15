@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Folio="183" Fecha="2025-01-27T12:13:54" Sello="Lq6ZoXffRkMH1js6+KgwgqR0roXt11KvKI2bwLRzhAK7CRL7TGdKPKPVjH4vl6Tlc4oOOlRUozRCCr1QFyLXqiYwTwImcZiQvQoQAC8yWNjkFQG3rhLFMe9ep8dkL6n7QJL+qwm2PpyteP5Zh2lClGQUQ8UKHxQHuvCtGiU1s4SsMyCnqJOqcS9iN5PdACapCfpyZYEOIDP46Yn37aHjQ9mZ2P96wKmm29HVktOGXLcIsckP9HTemLI56GEGKGF7TUxAYu3E4yHsp5oqodWEEZ9OwVsibEjOzQFTETvHqKqa/JvG2VhygSKYo214KvxwhICGQ2NjLEvSe/T9m9q1rg==" FormaPago="03" NoCertificado="00001000000517003204" Certificado="MIIGNTCCBB2gAwIBAgIUMDAwMDEwMDAwMDA1MTcwMDMyMDQwDQYJKoZIhvcNAQELBQAwggGEMSAwHgYDVQQDDBdBVVRPUklEQUQgQ0VSVElGSUNBRE9SQTEuMCwGA1UECgwlU0VSVklDSU8gREUgQURNSU5JU1RSQUNJT04gVFJJQlVUQVJJQTEaMBgGA1UECwwRU0FULUlFUyBBdXRob3JpdHkxKjAoBgkqhkiG9w0BCQEWG2NvbnRhY3RvLnRlY25pY29Ac2F0LmdvYi5teDEmMCQGA1UECQwdQVYuIEhJREFMR08gNzcsIENPTC4gR1VFUlJFUk8xDjAMBgNVBBEMBTA2MzAwMQswCQYDVQQGEwJNWDEZMBcGA1UECAwQQ0lVREFEIERFIE1FWElDTzETMBEGA1UEBwwKQ1VBVUhURU1PQzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMVwwWgYJKoZIhvcNAQkCE01yZXNwb25zYWJsZTogQURNSU5JU1RSQUNJT04gQ0VOVFJBTCBERSBTRVJWSUNJT1MgVFJJQlVUQVJJT1MgQUwgQ09OVFJJQlVZRU5URTAeFw0yMzAxMDQxODE2MDRaFw0yNzAxMDQxODE2NDRaMIHRMR8wHQYDVQQDExZPU0NBUiBJVkFOIFJJT1MgUElORURBMR8wHQYDVQQpExZPU0NBUiBJVkFOIFJJT1MgUElORURBMR8wHQYDVQQKExZPU0NBUiBJVkFOIFJJT1MgUElORURBMQswCQYDVQQGEwJNWDEqMCgGCSqGSIb3DQEJARYbdmFuZXNzYV9sb3ZlXzMzQGhvdG1haWwuY29tMRYwFAYDVQQtEw1SSVBPOTQwMTE5UDUwMRswGQYDVQQFExJSSVBPOTQwMTE5SEJDU05TMDAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCJ2Eh+k2tRFyHgOU5D2gorsHvSenoOlI9WEmeVZM+V+CVHIZcy+ot1hBEBOwcyWVovvcYcjW2gyLcw/wxj9xjxs6bx2SG26pJNcWlAlHftpZ266ENZ3QWI93t6Cc7h43MWMkyciGOvWlSZAebwwFCVRPTYIv/rW71Q60AS6x048RmBvsA678Gg5vO28f0eNQPndDQIxs1JBGjQDixksqhzMLeq2c8yddVkajfT0xXoOKgIVms3YYGv7kptZqUao0orqZVOeof7OMn/vk7qAF1VvK7wpfGPYfUSkWwRczb8hIqYFo+a5f1uiTL8qHGwyRdSMKunMxDxDPvE0moiTvxZAgMBAAGjTzBNMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgPYMBEGCWCGSAGG+EIBAQQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDBAYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggIBAEI6CeHh6DGxxbvjySyrN6LBYUsShEs5oPSdRNp5hiBhBAgAETqXluSGDaoebbtMa+boyAkJZb6ZKcOC5MIUXbIDlOEDPgu6GF2L9UzpaeI+QqjOsG7sVf2B5o8fJvEM2sp+358ZpSg8JQXb43LgTM1oGMFDW3IyBOqSTjeMlr4+siW2gQygeLBCPp+JchT2gCeImt9+TzBGcgXQJrDhkIAhA+rp0uGZl/havLPydUGTTfl6AEK6i5yWP47hmhPNJ9xyce5ZPlBCg0j8CL6XU0W8dnuurfH8QzszZTWAfnqmvxcf9P/FN8gD8IB97WMdbnrifuwE9Qrm74QZrbLL3iQsJfrDS8xJ5dDfTWK8PRwXTyeeEM5rpSSk1tiIWhg4YPYTvB6x4eUzQGmo6NR7M+dReFOOmWCBjl7XI6SQUoALQILlEQK/yJDLYFlKds/ACjKH1kf//ramIeMLOqzc7fh7iqrdkajVdtqQYjPbxq4+DHDPKW+ncQqnE/WspCWwwguded6UHtxgQg7xnqHs6g012X+JtD+7NlAqIi8FwBiRj1BBEcpAnoTnVmNSqgfmbemLDuEdYEBqHjqXvxLw3ydb6o9AXP4HWTlzTiwqyrK9auXNk48rFnCMTi4S/bt+ssW0d4de7HOpExhXoAodGHJxrDtT1xBQihhhtpnWf27N" SubTotal="18942.00" Moneda="MXN" Total="21972.72" TipoDeComprobante="I" Exportacion="01" MetodoPago="PUE" LugarExpedicion="60950" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cfdi:Emisor Rfc="RIPO940119P50" Nombre="OSCAR IVAN RIOS PINEDA" RegimenFiscal="612" />
+  <cfdi:Receptor Rfc="GCA180608UD1" Nombre="GRUPO CONSTRUCTOR ASFALMAQUINAS" DomicilioFiscalReceptor="39010" RegimenFiscalReceptor="601" UsoCFDI="G03" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="40161500" Cantidad="3.00" ClaveUnidad="H87" Unidad="Pieza" Descripcion="FILTRO DE ACEITE 1R-0726 (P551317 DONALDSON)" ValorUnitario="975" Importe="2925.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="2925.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="468.00" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40161500" Cantidad="2.00" ClaveUnidad="H87" Unidad="Pieza" Descripcion="FILTRO SECUNDARIO 8N-6309 (P181126 DONALDSON)" ValorUnitario="3282.50" Importe="6565.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="6565.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1050.40" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40161500" Cantidad="2.00" ClaveUnidad="H87" Unidad="Pieza" Descripcion="FILTRO PRIMARIO 8N-2556 (P523048 DONALDSON)" ValorUnitario="4050" Importe="8100.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="8100.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1296.00" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="40161500" Cantidad="5.00" ClaveUnidad="H87" Unidad="Pieza" Descripcion="FILTRO COMBUSTIBLE 1R-0756 (P551317 DONALDSON)" ValorUnitario="270.40" Importe="1352.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1352.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="216.32" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="3030.72">
+    <cfdi:Traslados>
+      <cfdi:Traslado Base="18942.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3030.72" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="A3CD6880-E7EE-4076-82CB-5852B80317F6" FechaTimbrado="2025-01-27T12:14:22" RfcProvCertif="SAT970701NN3" SelloCFD="Lq6ZoXffRkMH1js6+KgwgqR0roXt11KvKI2bwLRzhAK7CRL7TGdKPKPVjH4vl6Tlc4oOOlRUozRCCr1QFyLXqiYwTwImcZiQvQoQAC8yWNjkFQG3rhLFMe9ep8dkL6n7QJL+qwm2PpyteP5Zh2lClGQUQ8UKHxQHuvCtGiU1s4SsMyCnqJOqcS9iN5PdACapCfpyZYEOIDP46Yn37aHjQ9mZ2P96wKmm29HVktOGXLcIsckP9HTemLI56GEGKGF7TUxAYu3E4yHsp5oqodWEEZ9OwVsibEjOzQFTETvHqKqa/JvG2VhygSKYo214KvxwhICGQ2NjLEvSe/T9m9q1rg==" NoCertificadoSAT="00001000000705250068" SelloSAT="ScBKB6VSGDhXxO3z9/u0H4scaJBlYIAWdb5RIOhjewxdjhuuHySzSmiFG3fYV4wkd39qhEq1h/2aozlg/QyQXbjRMTKe57W4I2a30zOns81Cyr723RzFL0cI9ID6/jMDyOYEC+D2EGLp94lvFYV+al17wXSvq4klwgZxtbS8zG2fhRbCabHOVi3Wk6T/gqSONo5pJinTNYrVQ9SX2cWx2QdyZqWLFHCel/wzVo2vfP5UOjPcRWmmkU4FLvLnvcrvyKk6s2rrt6T9v2VAGhPpbPfHsFxCF1vXSDnrg+MG361M/376IeKVRBLsuW5aHZdQRTLBjBl5+2YhNJ+6A47w6g==" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

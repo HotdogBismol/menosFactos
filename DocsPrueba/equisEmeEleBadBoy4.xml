@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Serie="EFOS" Folio="004" Fecha="2025-02-14T13:00:00" Sello="SelloFalso101" FormaPago="03" NoCertificado="00001000000123456789" Certificado="CertFalso101" SubTotal="15000.00" Moneda="MXN" Total="17400.00" TipoDeComprobante="I" Exportacion="01" MetodoPago="PUE" LugarExpedicion="60695" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cfdi:Emisor Rfc="AAA120730823" Nombre="ASESORES Y ADMINISTRADORES AGRICOLAS, S. DE R.L. DE C.V." RegimenFiscal="601" />
+  <cfdi:Receptor Rfc="GCA180608UD1" Nombre="GRUPO CONSTRUCTOR ASFALMAQUINAS" DomicilioFiscalReceptor="39010" RegimenFiscalReceptor="601" UsoCFDI="G03" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="84111506" Cantidad="1" ClaveUnidad="ACT" Unidad="SERVICIO" Descripcion="Consultoria administrativa apócrifa" ValorUnitario="15000.00" Importe="15000.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="15000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="2400.00" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="2400.00">
+    <cfdi:Traslados>
+      <cfdi:Traslado Base="15000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="2400.00" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="44444444-4444-4444-4444-444444444444" FechaTimbrado="2025-02-14T13:05:00" RfcProvCertif="LSO1306189R5" SelloCFD="SelloFalso101" NoCertificadoSAT="00001000000987654321" SelloSAT="SelloSatFalso101" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

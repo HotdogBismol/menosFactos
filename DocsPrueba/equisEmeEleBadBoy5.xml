@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Serie="EFOS" Folio="005" Fecha="2025-02-14T14:00:00" Sello="SelloFalso202" FormaPago="03" NoCertificado="00001000000123456789" Certificado="CertFalso202" SubTotal="8000.00" Moneda="MXN" Total="9280.00" TipoDeComprobante="I" Exportacion="01" MetodoPago="PUE" LugarExpedicion="60695" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cfdi:Emisor Rfc="AAA121206EV5" Nombre="AMÉRICA ADMINISTRATIVA ARROLLO, S.A. DE CV." RegimenFiscal="601" />
+  <cfdi:Receptor Rfc="GCA180608UD1" Nombre="GRUPO CONSTRUCTOR ASFALMAQUINAS" DomicilioFiscalReceptor="39010" RegimenFiscalReceptor="601" UsoCFDI="G03" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="84111506" Cantidad="1" ClaveUnidad="ACT" Unidad="SERVICIO" Descripcion="Comercializacion de intangibles" ValorUnitario="8000.00" Importe="8000.00" ObjetoImp="02">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="8000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1280.00" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="1280.00">
+    <cfdi:Traslados>
+      <cfdi:Traslado Base="8000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="1280.00" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="55555555-5555-5555-5555-555555555555" FechaTimbrado="2025-02-14T14:05:00" RfcProvCertif="LSO1306189R5" SelloCFD="SelloFalso202" NoCertificadoSAT="00001000000987654321" SelloSAT="SelloSatFalso202" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

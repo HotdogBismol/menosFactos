@@ -1,0 +1,155 @@
+body {
+    font-family: sans-serif;
+    /* AUMENTADO: De 9px a 12px */
+    font-size: 12px;
+    color: #000;
+    margin: 0;
+}
+
+/* --- Estructura Principal y Tablas --- */
+.header-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px; /* Un poco más de espacio entre tablas */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 6px; /* Un poco más de relleno */
+    /* AUMENTADO: De 8px a 11px */
+    font-size: 11px;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 6px; /* Un poco más de relleno */
+    vertical-align: top;
+}
+
+/* --- Clases de Utilidad y Bordes --- */
+.no-border, 
+.no-border td {
+    border: none !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.pad-r-10 {
+    padding-right: 15px;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+/* --- Celdas Específicas del Header --- */
+.logo-cell {
+    width: 320px; 
+    vertical-align: top;
+}
+
+.logo-img {
+    width: 300px;
+}
+
+.info-cell {
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+/* --- Tipografía --- */
+.title {
+    /* AUMENTADO: De 16px a 22px */
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    /* AUMENTADO: De 12px a 16px */
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 15px;
+    border-bottom: 2px solid #555;
+    margin-bottom: 5px;
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.small {
+    /* AUMENTADO: De 7px a 9px */
+    font-size: 9px;
+    word-break: break-all;
+}
+
+/* --- Sección de Totales --- */
+.totales-wrapper {
+    width: 100%; 
+    overflow: hidden;
+}
+
+.totales-table {
+    /* AUMENTADO: De 40% a 50% para que quepan los números grandes */
+    width: 50%; 
+    float: right;
+}
+
+.bg-gray {
+    background-color: #eee;
+}
+
+/* --- Sección Timbre y QR --- */
+.timbre-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 25px;
+}
+
+.dentroTimbre-box {
+    display: flex;
+    width: 100%;
+}
+
+.qr-cell {
+    width: 160px; /* Un poco más ancho */
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.qr-img {
+    width: 150px; /* QR un poco más grande */
+}
+
+.footer {
+    /* AUMENTADO: De 8px a 10px */
+    font-size: 10px; 
+    margin-top: 15px; 
+    text-align: center;
+    display: block;
+    color: #666;
+}

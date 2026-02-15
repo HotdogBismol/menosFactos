@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        {{ css_contenido }}
+    </style>
+</head>
+<body>
+    <table class="no-border header-container">
+        <tr>
+            <td class="no-border logo-cell">
+                <img src="{{ ruta_logo }}" class="logo-img">
+            </td>
+            
+            <td class="no-border info-cell">
+                <table class="no-border">
+                    <tr>
+                        <td class="no-border">
+                            <strong>Serie-Folio:</strong> {{ general.serie }}-{{ general.folio }}<br>
+                            <strong>Tipo:</strong> {{ general.tipo }}<br>
+                            <strong>Versión:</strong> {{ general.version }}
+                        </td>
+                        <td class="no-border text-right">
+                            <strong>Fecha:</strong> {{ general.fecha }}<br>
+                            <strong>Moneda:</strong> {{ general.moneda }}<br>
+                            <strong>Pág:</strong> 1
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table class="no-border">
+        <tr>
+            <td class="no-border w-50 pad-r-10">
+                <div class="subtitle">Emisor</div>
+                <strong>{{ emisor.nombre }}</strong><br>
+                RFC: {{ emisor.rfc }}<br>
+                Régimen: {{ general.regimen_emisor }}<br>
+                Lugar Exp.: {{ general.lugar }}<br>
+                Método Pago: {{ general.metodo }}
+            </td>
+            <td class="no-border w-50">
+                <div class="subtitle">Receptor</div>
+                <strong>{{ receptor.nombre }}</strong><br>
+                RFC: {{ receptor.rfc }}<br>
+                Uso CFDI: {{ general.uso_cfdi }}<br>
+                Régimen: {{ general.regimen_receptor }}<br>
+                Dom. Fiscal: {{ general.cp_receptor }}<br>
+                Forma Pago: {{ general.forma }}
+            </td>
+        </tr>
+    </table>
+
+    {% if conceptos %}
+    <div class="subtitle">Conceptos</div>
+    <table>
+        <thead>
+            <tr>
+                <th width="8%">Cant</th>
+                <th width="10%">CvePrSrv</th>
+                <th width="8%">CveUni</th>
+                <th>Descripción</th>
+                <th width="10%">V. Unitario</th>
+                <th width="10%">Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in conceptos %}
+            <tr>
+                <td>{{ c.cantidad }}</td>
+                <td>{{ c.clave_prod }}</td>
+                <td>{{ c.clave_uni }}</td>
+                <td>
+                    {{ c.descripcion }} <br>
+                    {% if c.no_iden %}<small>No. ID: {{ c.no_iden }}</small><br>{% endif %}
+                    <small>{{ c.impuestos_str }}</small>
+                </td>
+                <td class="text-right">{{ c.valor_unitario }}</td>
+                <td class="text-right">{{ c.importe }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if general.tipo == 'P' and pagos %}
+    <div class="subtitle">Información del Pago</div>
+    <table>
+        <thead>
+            <tr><th>Fecha Pago</th><th>Forma</th><th>Moneda</th><th>T.C.</th><th>Monto</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ pagos.fecha }}</td>
+                <td>{{ pagos.forma }}</td>
+                <td>{{ pagos.moneda }}</td>
+                <td>{{ pagos.tc }}</td>
+                <td class="text-right bold">{{ pagos.monto }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {% if pagos.docs %}
+    <div class="subtitle">Documentos Relacionados</div>
+    <table>
+        <thead>
+            <tr>
+                <th>UUID Documento</th>
+                <th>Folio</th>
+                <th>Moneda</th>
+                <th>Saldo Ant.</th>
+                <th>Pagado</th>
+                <th>Insoluto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in pagos.docs %}
+            <tr>
+                <td class="small">{{ d.uuid }}</td>
+                <td>{{ d.folio }}</td>
+                <td>{{ d.moneda }}</td>
+                <td class="text-right">{{ d.saldo_ant }}</td>
+                <td class="text-right">{{ d.pagado }}</td>
+                <td class="text-right">{{ d.saldo_ins }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    {% endif %}
+
+    <div class="totales-wrapper">
+        <table class="totales-table">
+            {% if general.tipo != 'P' %}
+            <tr>
+                <td class="text-right"><strong>Subtotal:</strong></td>
+                <td class="text-right">{{ totales.subtotal }}</td>
+            </tr>
+            <tr>
+                <td class="text-right"><strong>Trasladados (IVA):</strong></td>
+                <td class="text-right">{{ totales.traslados }}</td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td class="text-right bg-gray"><strong>Total:</strong></td>
+                <td class="text-right bold bg-gray">{{ totales.total }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="timbre-box">
+        <div class="subtitle mt-0">Timbre Fiscal Digital</div>
+        
+        <div class="dentroTimbre-box">
+            <table class="no-border">
+                <tr>
+                    <td class="no-border">
+                        <strong>Fecha de Timbrado:</strong> {{ timbre.fecha }}<br>
+                        <strong>Folio Fiscal (UUID):</strong> {{ timbre.uuid }}<br>
+                        <strong>Certificado Emisor:</strong> {{ timbre.cert_emisor }}<br>
+                        <strong>Certificado SAT:</strong> {{ timbre.cert_sat }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no-border">
+                        <strong>Sello del Emisor:</strong><br>
+                        <div class="small">{{ timbre.sello_cfd }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no-border">
+                        <strong>Sello del SAT:</strong><br>
+                        <div class="small">{{ timbre.sello_sat }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no-border">
+                        <strong>Cadena Original:</strong><br>
+                        <div class="small">{{ timbre.cadena }}</div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="qr-cell">
+                <img src="data:image/png;base64,{{ qr }}" class="qr-img">
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Este documento es una representación impresa de un CFDI 4.0
+    </div>
+</body>
+</html>

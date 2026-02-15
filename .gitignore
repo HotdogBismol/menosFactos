@@ -1,0 +1,12 @@
+# Ignorar PDFs generados
+*.pdf
+
+# Ignorar reportes de Excel
+*.xlsx
+
+# Ignorar archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Opcional: Ignorar los XML de prueba si no quieres subirlos
+# *.xml
