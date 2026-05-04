@@ -1,50 +1,52 @@
 from jinja2 import Environment, FileSystemLoader
 import pdfkit
-import os
-import pathlib  # <--- AGREGAMOS ESTA LIBRERÍA
+import sys
+from pathlib import Path
+
+# Compatibilidad con PyInstaller (--onefile)
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys._MEIPASS)
+else:
+    BASE_DIR = Path(__file__).parent
+
 
 class PDFGenerator:
     def __init__(self, wkhtmltopdf_path):
         self.wkhtmltopdf_path = wkhtmltopdf_path
-        
+
     def generate(self, data, output_path):
-        # 1. Leer CSS
-        css_text = ""
+        # --- CSS ---
+        css_path = BASE_DIR / 'estiloPlantilla.css'
         try:
-            with open('estiloPlantilla.css', 'r', encoding='utf-8') as f:
-                css_text = f.read()
-        except:
-            pass
+            css_text = css_path.read_text(encoding='utf-8')
+        except FileNotFoundError:
+            raise FileNotFoundError(f"No se encontró el archivo de estilos: {css_path}")
+        except Exception as e:
+            raise RuntimeError(f"Error leyendo estiloPlantilla.css: {e}")
+
         data['css_contenido'] = css_text
 
-        # --- CORRECCIÓN DEL ERROR DE IMAGEN ---
-        # Obtenemos la ruta absoluta
-        abs_path = os.path.abspath("R.png")
-        
-        # La convertimos a formato URI (file:///C:/...)
-        # Esto satisface al motor de wkhtmltopdf en Windows
-        ruta_logo = pathlib.Path(abs_path).as_uri()
-        
-        data['ruta_logo'] = ruta_logo 
-        # --------------------------------------------------
+        # --- Logo: ruta URI para wkhtmltopdf en Windows ---
+        logo_path = BASE_DIR / 'R.png'
+        data['ruta_logo'] = logo_path.as_uri()
 
-        # 3. Configurar Jinja2
-        file_loader = FileSystemLoader('.')
-        env = Environment(loader=file_loader)
+        # --- Plantilla Jinja2 con ruta absoluta ---
+        env = Environment(loader=FileSystemLoader(str(BASE_DIR)))
         template = env.get_template('plantilla.html')
-
-        # 4. Renderizar
         html_content = template.render(data)
-        
-        # 5. Configurar PDFKit
+
+        # --- Opciones de PDF ---
         options = {
-            'page-size': 'Letter', 
-            'margin-top': '10mm', 'margin-right': '10mm', 
-            'margin-bottom': '10mm', 'margin-left': '10mm',
-            'encoding': "UTF-8", 
-            'no-outline': None,
-            'enable-local-file-access': None 
+            'page-size':      'Letter',
+            'margin-top':     '10mm',
+            'margin-right':   '10mm',
+            'margin-bottom':  '10mm',
+            'margin-left':    '10mm',
+            'encoding':       'UTF-8',
+            'no-outline':     None,
+            'enable-local-file-access': None,
         }
-        
+
         config = pdfkit.configuration(wkhtmltopdf=self.wkhtmltopdf_path)
-        pdfkit.from_string(html_content, output_path, configuration=config, options=options)
+        pdfkit.from_string(html_content, output_path,
+                           configuration=config, options=options)

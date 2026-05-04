@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(python3 -c \"import satcfdi; print\\(''satcfdi available''\\)\")",
+      "Bash(python -c \"import satcfdi; print\\(''satcfdi available''\\)\")",
+      "Bash(pip install:*)",
+      "Bash(pyinstaller pruebas.spec --clean --noconfirm)",
+      "Bash(taskkill /F /IM pruebas.exe)",
+      "Bash(taskkill //F //IM pruebas.exe)",
+      "Bash(py -c \"from satcfdi.pacs.sat import SAT, TipoDescargaMasivaTerceros, EstadoSolicitud; import inspect; print\\(inspect.signature\\(SAT.recover_comprobante_received_request\\)\\)\")",
+      "Bash(py -c \"from satcfdi.pacs.sat import EstadoComprobante; print\\(list\\(EstadoComprobante\\)\\)\")"
+    ]
+  }
+}
